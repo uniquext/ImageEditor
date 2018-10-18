@@ -1,10 +1,14 @@
 # ImageEditor
 一个简单的支持旋转、裁剪、文字、模糊操作的图片编辑器
-##TrimView
+
+## TrimView
 裁剪
-##RotateImageView
+
+## RotateImageView
 旋转
-##MosaicView
+
+## MosaicView
 模糊
-##CharactersLayout
+
+## CharactersLayout
 文本框
