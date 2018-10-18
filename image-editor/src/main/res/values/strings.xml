@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">ImageEditor</string>
+    <string name="activity_scheme">scheme</string>
+    <string name="activity_host">com.uniquext.image-editor</string>
+
+    <string name="back">返回</string>>
+    <string name="save">保存</string>
+
+    <string name="rotate">旋转</string>
+    <string name="characters">文字</string>
+    <string name="mosaic">模糊</string>
+    <string name="trim">裁剪</string>
+
+    <string name="rotate_free">自由</string>
+    <string name="rotate_rate_1">1:1</string>
+    <string name="rotate_rate_2">4:3</string>
+    <string name="rotate_rate_3">16:9</string>
+
+    <string name="mosaic_brush">画笔</string>
+    <string name="mosaic_rank">硬度</string>
+
+    <string name="percent_empty">0</string>
+    <string name="percent_full">100%</string>
+    <string name="color">颜色</string>
+
+    <string name="input_characters">点击输入文字</string>
+    <string name="input_hint">点击输入描述文字</string>
+    <string name="complete">完成</string>
 </resources>

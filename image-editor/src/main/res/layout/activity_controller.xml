@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background">
+
+    <View
+        android:id="@+id/view_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_bar" />
+
+    <View
+        android:id="@+id/view_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@color/nav_bar"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_source_drawable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:drawablePadding="7dp"
+        android:drawableStart="@mipmap/icon_back"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/back"
+        android:textColor="@color/text_default_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:text="@string/save"
+        android:textColor="@color/text_theme_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_revoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:padding="10dp"
+        android:src="@mipmap/icon_revoke_unable"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:padding="10dp"
+        android:src="@mipmap/icon_forward_unable"
+        app:layout_constraintBottom_toBottomOf="@+id/view_title_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_title_bar" />
+
+    <TextView
+        android:id="@+id/tv_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="11dp"
+        android:drawableTop="@mipmap/icon_rotate"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/rotate"
+        android:textColor="@color/text_default_color"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <TextView
+        android:id="@+id/tv_characters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="11dp"
+        android:drawableTop="@mipmap/icon_characters"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/characters"
+        android:textColor="@color/text_default_color"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <TextView
+        android:id="@+id/tv_mosaic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="11dp"
+        android:drawableTop="@mipmap/icon_mosaic"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/mosaic"
+        android:textColor="@color/text_default_color"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <TextView
+        android:id="@+id/tv_trim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="11dp"
+        android:drawableTop="@mipmap/icon_trim"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/trim"
+        android:textColor="@color/text_default_color"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+</android.support.constraint.ConstraintLayout>

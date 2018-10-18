@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nav_bar"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/view_dividing"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line"
+        app:layout_constraintBottom_toTopOf="@+id/view_nav_bar" />
+
+    <View
+        android:id="@+id/view_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@color/nav_bar"
+        app:layout_constraintBottom_toTopOf="@+id/view_dividing" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/image_background"
+        app:layout_constraintBottom_toTopOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.uniquext.android.imageeditor.widget.characters.CharactersLayout
+            android:id="@+id/layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/percent_empty"
+        android:textColor="@color/text_default_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/label_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/percent_full"
+        android:textColor="@color/text_default_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="36dp"
+        android:maxHeight="2dp"
+        android:progressDrawable="@drawable/seek_bar_progress"
+        android:thumb="@drawable/seek_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_color_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_text"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/characters"
+        android:textColor="@color/text_theme_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_color"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/color"
+        android:textColor="@color/text_default_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <View
+        android:id="@+id/view_checked_underline"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:background="@color/text_theme_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group_size_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="label_start,label_end,seek_bar_rate" />
+
+</android.support.constraint.ConstraintLayout>

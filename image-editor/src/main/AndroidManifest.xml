@@ -1,2 +1,70 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.uniquext.android.image_editor" />
+    package="com.uniquext.android.imageeditor">
+
+    <application>
+        <activity
+            android:name=".activity.controller.MainControllerActivity"
+            android:theme="@style/ImageEditorStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/activity_host"
+                    android:pathPattern="/main"
+                    android:scheme="@string/activity_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.rotate.RotateOperateActivity"
+            android:theme="@style/ImageEditorStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/activity_host"
+                    android:pathPattern="/rotate"
+                    android:scheme="@string/activity_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.mosaic.MosaicOperateActivity"
+            android:theme="@style/ImageEditorStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/activity_host"
+                    android:pathPattern="/mosaic"
+                    android:scheme="@string/activity_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.trim.TrimOperateActivity"
+            android:theme="@style/ImageEditorStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/activity_host"
+                    android:pathPattern="/trim"
+                    android:scheme="@string/activity_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.characters.CharactersOperateActivity"
+            android:theme="@style/ImageEditorStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/activity_host"
+                    android:pathPattern="/characters"
+                    android:scheme="@string/activity_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

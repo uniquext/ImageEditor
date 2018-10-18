@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nav_bar"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/view_dividing"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/dividing_line"
+        app:layout_constraintBottom_toTopOf="@+id/view_nav_bar" />
+
+    <View
+        android:id="@+id/view_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:background="@color/nav_bar"
+        app:layout_constraintBottom_toTopOf="@+id/view_dividing" />
+
+    <com.uniquext.android.imageeditor.widget.MosaicView
+        android:id="@+id/view_image_mosaic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/image_background"
+        app:layout_constraintBottom_toTopOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/mosaic_brush"
+        android:textColor="@color/text_default_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_revoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:padding="10dp"
+        android:src="@mipmap/icon_revoke_unable"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:maxHeight="2dp"
+        android:progressDrawable="@drawable/seek_bar_progress"
+        android:thumb="@drawable/seek_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/mosaic_rank"
+        android:textColor="@color/text_default_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/tv_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/text_default_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.7"
+        tools:text="50%" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:maxHeight="2dp"
+        android:progressDrawable="@drawable/seek_bar_progress"
+        android:thumb="@drawable/seek_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/view_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_action_bar"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:padding="15dp"
+        android:src="@mipmap/icon_confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/mosaic"
+        android:textColor="@color/text_default_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_nav_bar" />
+
+</android.support.constraint.ConstraintLayout>
